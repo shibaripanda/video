@@ -2,7 +2,7 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    margin-top: 3px
+    margin-top: 0px
 }
 
 #root {
@@ -11,7 +11,11 @@
 }
 
 .App {
-    width:  800px;
+    width:  1400px;
+}
+
+.Nav {
+    width: 15%;
 }
 
 .settingcreen {
@@ -20,11 +24,9 @@
 
 .post {
     display: flex;
-    padding: 9px;
-    margin-top: 15px;
     justify-content: space-between;
-    align-items: top;
-    border-radius: 10px;
+    /* align-items: top; */
+    background-color: rgb(252, 6, 6);
 }
 
 .colorset {
