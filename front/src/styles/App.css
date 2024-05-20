@@ -11,12 +11,17 @@
 }
 
 .App {
-    width:  1400px;
+    
+    width:  1480px;
 }
 
 .Nav {
-    width: 15%;
+    width: 19%;
 }
+
+/* .Main {
+    width: 81%;
+} */
 
 .settingcreen {
     width:  100%;

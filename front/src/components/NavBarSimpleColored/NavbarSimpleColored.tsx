@@ -1,6 +1,6 @@
 import React from 'react';
 import { useState } from 'react';
-import { Group } from '@mantine/core';
+// import { Group } from '@mantine/core';
 import classes from './NavbarSimpleColored.module.css';
 import { Image, Text } from '@mantine/core'
 import pic from '../../img/16.png';
@@ -33,14 +33,11 @@ export function NavbarSimpleColored() {
     <nav className={classes.navbar}>
       <div className={classes.navbarMain}>
         <div className={classes.header}>
-          <div className={classes.icon}>
-            <Image src={pic} alt="Avatar" h='2vmax' w="auto" />
-            <div className={classes.icontext}>
-            dfdfdfdfd
-            </div>
-          </div>
+            <div><Image src={pic} alt="Avatar" h='2vmax' w="auto" /></div>
+            <div className={classes.icontext}>Text text</div>
+            <div></div>
+            <div></div>
         </div>
-       
         {links}
       </div>
     </nav>

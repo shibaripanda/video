@@ -18,17 +18,15 @@
 
 .icontext {
   display: flex;
-  /* margin:  1vmax 1vmax 2vmax; */
   font-size: 1.5vmax;
-  align-items: top;
-  
+  align-items: center;
+  /* valign-items: center; */
 }
 
 .header {
+  margin:  1vmax 1vmax 2vmax;
+  display: flex;
   justify-content: space-between;
-  /* padding-bottom: var(--mantine-spacing-md);
-  margin-bottom: calc(var(--mantine-spacing-md) * 1.5);
-  border-bottom: rem(1px) solid var(--mantine-color-blue-7); */
 }
 
 .link {

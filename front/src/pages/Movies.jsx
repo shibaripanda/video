@@ -8,7 +8,6 @@ export const Movies = () => {
         <div className="post">
             <div className="Nav"><NavbarSimpleColored/></div>
             <div>Привет</div>
-            <div></div>
         </div>
     )
 }
