@@ -4,15 +4,16 @@ import { BrowserRouter, Route, Routes } from "react-router-dom"
 import { Movies } from "./pages/Movies"
 import { Movie } from "./pages/Movie"
 import { Page404 } from "./pages/Page404"
-import { createTheme, MantineProvider } from '@mantine/core'
+import { createTheme, MantineProvider, useMantineTheme } from '@mantine/core'
 
-const theme = createTheme({
-  /** Put your mantine theme override here */
-});
+// const theme = createTheme({
+//   /** Put your mantine theme override here */
+// });
 
 export default function App() {
+  // const theme = useMantineTheme()
   return(
-      <MantineProvider theme={theme}>
+      <MantineProvider>
         <BrowserRouter>
           <Routes>
               <Route path="/" element={<Movies/>} />

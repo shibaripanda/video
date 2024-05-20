@@ -4,23 +4,25 @@
   padding: var(--mantine-spacing-md);
   display: flex;
   flex-direction: column;
-  background-color: rgb(242, 236, 250);
+  background-color: #F2EBF9;
 }
 
 .navbarMain {
   flex: 1;
 }
 
-.icon {
+/* .icon {
   display: flex;
   margin:  1vmax 1vmax 2vmax;
-}
+} */
 
 .icontext {
   display: flex;
   font-size: 1.5vmax;
   align-items: center;
-  /* valign-items: center; */
+  font-weight: 600;
+  font-family: 'Poppins';
+  color: #9854F6
 }
 
 .header {
@@ -34,21 +36,22 @@
   align-items: center;
   text-decoration: none;
   font-size: 1vmax;
-  color: rgb(0, 0, 0);
-  padding: 0.6vmax;
-  border-radius: 0.3vmax;
+  color: #000000;
+  padding: 0.625vmax;
+  border-radius: 0.5vmax;
   font-weight: 600;
   margin:  0.5vmax 1vmax 0.5vmax 1vmax;
+  font-family: 'PoppinsL';
 
   &:hover {
     background-color: rgb(229, 213, 250);
-    color: rgb(0, 0, 0);
+    color: #000000;
   }
 
   &[data-active] {
     &,
     &:hover {
-      box-shadow: var(--mantine-shadow-sm);
+      font-family: 'Poppins';
       background-color: rgb(229, 213, 250);
       color: rgb(140, 93, 233);
     }

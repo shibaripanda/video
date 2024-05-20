@@ -5,9 +5,28 @@
     margin-top: 0px
 }
 
+@font-face {
+    font-family: 'Poppins';
+    src: local('Poppins'),
+      url('../fonts/Poppins/Poppins-SemiBold.ttf') format('truetype');
+    font-weight: bold;
+}
+
+@font-face {
+    font-family: 'PoppinsL';
+    src: local('Poppins'),
+      url('../fonts/Poppins/Poppins-Regular.ttf') format('truetype');
+    font-weight: bold;
+}
+
 #root {
     display: flex;
     justify-content: center;
+}
+
+.mantine-SimpleGrid-root {
+    display: flex;
+    /* justify-content: space-between; */
 }
 
 .App {
@@ -19,78 +38,14 @@
     width: 19%;
 }
 
-/* .Main {
-    width: 81%;
-} */
-
-.settingcreen {
-    width:  100%;
+.Main {
+    margin:  1vmax 1vmax 2vmax 1vmax;
 }
 
 .post {
     display: flex;
     justify-content: space-between;
     /* align-items: top; */
-    background-color: rgb(252, 6, 6);
+    background-color: #D5D6DC;
     
 }
-
-.colorset {
-    display: flex;
-    padding: 10px;
-    margin-top: 15px;
-    justify-content: space-between;
-    align-items: center;
-    border-radius: 10px;
-}
-
-.code {
-    white-space: pre-line;
-}
-
-.perenos {
-    white-space: pre-wrap;
-}
-
-.print-agreement {
-    margin: 19px;
-}
-
-.vertical span {
-    writing-mode: vertical-rl;
-    transform: rotate(180deg);
-}
-  
-.border {
-border:  0px;
-}
-
-.table {
-font-size: 12px;
-}
-
-.tableAct {
-    font-size: 16px;
-    
-}
-
-.tableAct1 {
-    font-size: 14px;
-    /* border: 1px solid darkblue; */
-}
-
-.profi_item {
-    display: flex;
-    flex-direction: row;
-}
-
-.enter_page {
-    margin-top: 12px;
-    margin-right: 25px;
-    margin-left: 25px;
-}
-
-.create-line {
-    width: 360px;
-    border-top: 1px solid #000000;
-  }

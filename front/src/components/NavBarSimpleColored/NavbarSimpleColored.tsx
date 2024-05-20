@@ -1,8 +1,7 @@
 import React from 'react';
 import { useState } from 'react';
-// import { Group } from '@mantine/core';
 import classes from './NavbarSimpleColored.module.css';
-import { Image, Text } from '@mantine/core'
+import { Image } from '@mantine/core'
 import pic from '../../img/16.png';
 
 
@@ -12,7 +11,7 @@ const data = [
 ];
 
 export function NavbarSimpleColored() {
-  const [active, setActive] = useState('Billing');
+  const [active, setActive] = useState('Movies');
 
   const links = data.map((item) => (
     <a
@@ -34,7 +33,7 @@ export function NavbarSimpleColored() {
       <div className={classes.navbarMain}>
         <div className={classes.header}>
             <div><Image src={pic} alt="Avatar" h='2vmax' w="auto" /></div>
-            <div className={classes.icontext}>Text text</div>
+            <div className={classes.icontext}>ArrowFlicks</div>
             <div></div>
             <div></div>
         </div>
@@ -42,4 +41,4 @@ export function NavbarSimpleColored() {
       </div>
     </nav>
   );
-}// <MantineLogo size={28} inverted style={{ color: 'white' }} />
+}
