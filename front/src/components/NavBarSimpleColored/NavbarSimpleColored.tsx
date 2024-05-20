@@ -1,8 +1,9 @@
 import React from 'react';
 import { useState } from 'react';
 import { Group } from '@mantine/core';
-import { MantineLogo } from '@mantinex/mantine-logo';
 import classes from './NavbarSimpleColored.module.css';
+import { Image, Text } from '@mantine/core'
+import pic from '../../img/16.png';
 
 
 const data = [
@@ -31,11 +32,17 @@ export function NavbarSimpleColored() {
   return (
     <nav className={classes.navbar}>
       <div className={classes.navbarMain}>
-        <Group className={classes.header} justify="space-between">
-          <MantineLogo size={28} inverted style={{ color: 'white' }} />
-        </Group>
+        <div className={classes.header}>
+          <div className={classes.icon}>
+            <Image src={pic} alt="Avatar" h='2vmax' w="auto" />
+            <div className={classes.icontext}>
+            dfdfdfdfd
+            </div>
+          </div>
+        </div>
+       
         {links}
       </div>
     </nav>
   );
-}
+}// <MantineLogo size={28} inverted style={{ color: 'white' }} />

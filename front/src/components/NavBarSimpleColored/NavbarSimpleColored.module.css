@@ -1,6 +1,6 @@
 .navbar {
   height: 900px;
-  width: rem(300px);
+  /* width: rem(300px); */
   padding: var(--mantine-spacing-md);
   display: flex;
   flex-direction: column;
@@ -11,33 +11,36 @@
   flex: 1;
 }
 
-.header {
-  padding-bottom: var(--mantine-spacing-md);
-  margin-bottom: calc(var(--mantine-spacing-md) * 1.5);
-  border-bottom: rem(1px) solid var(--mantine-color-blue-7);
+.icon {
+  display: flex;
+  margin:  1vmax 1vmax 2vmax;
 }
 
-/* .footer {
-  padding-top: var(--mantine-spacing-md);
-  margin-top: var(--mantine-spacing-md);
-  border-top: rem(1px) solid var(--mantine-color-blue-7);
-} */
+.icontext {
+  display: flex;
+  /* margin:  1vmax 1vmax 2vmax; */
+  font-size: 1.5vmax;
+  align-items: top;
+  
+}
 
-/* .version {
-  background-color: var(--mantine-color-blue-7);
-  color: var(--mantine-color-white);
-} */
+.header {
+  justify-content: space-between;
+  /* padding-bottom: var(--mantine-spacing-md);
+  margin-bottom: calc(var(--mantine-spacing-md) * 1.5);
+  border-bottom: rem(1px) solid var(--mantine-color-blue-7); */
+}
 
 .link {
   display: flex;
   align-items: center;
   text-decoration: none;
-  font-size: 14px;
+  font-size: 1vmax;
   color: rgb(0, 0, 0);
-  padding: 5px 15px;
-  border-radius: 5px;
+  padding: 0.6vmax;
+  border-radius: 0.3vmax;
   font-weight: 600;
-  margin: 15px;
+  margin:  0.5vmax 1vmax 0.5vmax 1vmax;
 
   &:hover {
     background-color: rgb(229, 213, 250);
