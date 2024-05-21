@@ -4,7 +4,7 @@ import { BrowserRouter, Route, Routes } from "react-router-dom"
 import { Movies } from "./pages/Movies"
 import { Movie } from "./pages/Movie"
 import { Page404 } from "./pages/Page404"
-import { createTheme, MantineProvider, useMantineTheme } from '@mantine/core'
+import { MantineProvider } from '@mantine/core'
 
 // const theme = createTheme({
 //   /** Put your mantine theme override here */

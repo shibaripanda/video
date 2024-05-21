@@ -1,0 +1,62 @@
+.card {
+    width: 30.125vmax;
+    height: 13.625vmax;
+    border-radius: 0.5vmax;
+    
+  }
+
+  .boxitem {
+    height: 10.625vmax;
+    width: 100%;
+    position: relative;
+    margin-right: 1.5vmax;
+  }
+  
+  .title {
+    font-family: 'Inter';
+    color: #6a6af5;
+    align-items: center;
+    font-size: 1.25vmax;
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .year {
+    font-family: 'Inter400';
+    color: #7B7C88;
+    font-size: 1vmax;
+  }
+  
+  .genre {
+    font-family: 'Inter400';
+    font-size: 1vmax;
+    align-items: center;
+    position: absolute; 
+    bottom: 0; 
+    left: 0;
+    display: flex;
+    color: #7B7C88;
+  }
+
+  .genrelist {
+    font-family: 'Inter400';
+    font-size: 1vmax;
+    font-family: 'Poppins';
+    color: #000000;
+  }
+
+  .rate {
+    align-items: center;
+    font-size: 1vmax;
+    display: flex;
+    justify-content: flex-start;
+  }
+
+  .img {
+    margin: 1.5vmax 1.5vmax 1.5vmax 1.5vmax;
+    height: 10.625vmax;
+  }
+
+  .icon {
+    height: 1.75vmax;
+  }

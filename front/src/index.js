@@ -3,6 +3,7 @@ import ReactDOM from 'react-dom/client'
 import App from './App'
 import '../src/styles/App.css'
 import './fonts/Poppins/Poppins-Bold.ttf'
+import '@mantine/core/styles.css'
 
 
 const root = ReactDOM.createRoot(document.getElementById('root'))

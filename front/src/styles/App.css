@@ -19,13 +19,27 @@
     font-weight: bold;
 }
 
+@font-face {
+    font-family: 'Inter';
+    src: local('Poppins'),
+      url('../fonts/Inter/static/Inter-SemiBold.ttf') format('truetype');
+    font-weight: bold;
+}
+
+@font-face {
+    font-family: 'Inter400';
+    src: local('Poppins'),
+      url('../fonts/Inter/static/Inter-Light.ttf') format('truetype');
+    font-weight: bold;
+}
+
 #root {
     display: flex;
     justify-content: center;
 }
 
 .App { 
-    width:  92.5vmax;
+    width:  1440px;
 }
 
 .Nav {
@@ -33,15 +47,15 @@
 }
 
 .Main {
-    width: 81%;
+    /* width: 81%; */
     /* display: flex; */
     /* justify-content: center; */
-    margin:  2vmax 2vmax 2vmax 2vmax;
+    margin:  5.125vmax 5.125vmax 5.625vmax 5.125vmax;
 }
 
 .screen {
     display: flex;
-    justify-content: space-between;
+    justify-content: stretch;
     /* align-items: top; */
-    background-color: #6a6af5;
+    background-color: #E5E5E5;
 }
