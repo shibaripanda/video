@@ -1,5 +1,11 @@
 .paper {
-    border-radius: 10px;
+    border-radius: 0.75vmax;
     background-color: #ffffff;
-    margin:  1vmax 1vmax 1vmax 1vmax;
+    margin:  0.5vmax 0.5vmax 0.5vmax 0.5vmax;
+    width: 30.125vmax;
+    height: 13.625vmax;
+}
+
+.text {
+    font-size: 2vmax
 }

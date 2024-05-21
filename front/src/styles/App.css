@@ -24,14 +24,8 @@
     justify-content: center;
 }
 
-.mantine-SimpleGrid-root {
-    display: flex;
-    /* justify-content: space-between; */
-}
-
-.App {
-    
-    width:  1480px;
+.App { 
+    width:  92.5vmax;
 }
 
 .Nav {
@@ -39,13 +33,15 @@
 }
 
 .Main {
-    margin:  1vmax 1vmax 2vmax 1vmax;
+    width: 81%;
+    /* display: flex; */
+    /* justify-content: center; */
+    margin:  2vmax 2vmax 2vmax 2vmax;
 }
 
-.post {
+.screen {
     display: flex;
     justify-content: space-between;
     /* align-items: top; */
-    background-color: #D5D6DC;
-    
+    background-color: #6a6af5;
 }

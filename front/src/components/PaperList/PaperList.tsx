@@ -2,16 +2,12 @@ import { Text, Paper } from '@mantine/core';
 import React from 'react';
 import classes from './PaperList.module.css';
 
-export function PaperList() {
+export function PaperList({feature}) {
   return (
     <div>
       <Paper className={classes.paper}>
-        <Text>Paper is the most basic ui component</Text>
-        <Text>
-          Use it to create cards, dropdowns, modals 
-          and other components that require background
-          with shadow
-        </Text>
+        <Text className={classes.text}>{feature.title}</Text>
+        <Text className={classes.text}>{feature.description}</Text>
       </Paper>
     </div>
   );

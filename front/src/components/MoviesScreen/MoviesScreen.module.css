@@ -13,3 +13,7 @@
       margin-right: auto;
     }
   }
+
+  .grid {
+    display: flex; 
+  }
