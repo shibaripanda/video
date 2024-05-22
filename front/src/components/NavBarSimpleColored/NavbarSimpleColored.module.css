@@ -1,5 +1,5 @@
 .navbar {
-  height: 900px;
+  height: 56.25vmax;
   /* width: rem(300px); */
   /* padding: var(--mantine-spacing-md); */
   display: flex;
@@ -9,6 +9,42 @@
 
 .navbarMain {
   flex: 1;
+}
+
+.transform {
+  transform: rotate(180deg);
+}
+
+.icon {
+  height: 2vmax;
+  width: 2vmax;
+  position: relative;
+  display: flex;
+  justify-content: center;
+}
+
+.icon1 {
+  position: absolute;
+}
+
+.icon2 {
+  position: absolute;
+  transform: rotate(90deg);
+  bottom: 0.75vmax;
+  left: 1.07vmax;
+}
+
+.icon3 {
+  position: absolute;
+  transform: rotate(270deg);
+  bottom: -0.75vmax;
+  left: 1.07vmax;
+}
+
+.icon4 {
+  position: absolute;
+  transform: rotate(180deg);
+  left: 1.9vmax;
 }
 
 .icontext {

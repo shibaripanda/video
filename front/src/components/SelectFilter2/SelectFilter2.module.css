@@ -1,0 +1,12 @@
+.selectbig {
+    width: 8.614375vmax;
+    height: 2.625vmax;
+    border-radius: 5vmax;
+    /* border: 1vmax; */
+    /* margin-right: 15px; */
+}
+
+.labelfont {
+    font-size: '1vmax';
+    font-family: 'Inter';
+}

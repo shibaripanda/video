@@ -2,7 +2,7 @@ import React from 'react';
 import { useState } from 'react';
 import classes from './NavbarSimpleColored.module.css';
 import { Image } from '@mantine/core'
-import pic from '../../img/16.png';
+import pic from '../../img/arrow.png';
 
 
 const data = [
@@ -32,7 +32,12 @@ export function NavbarSimpleColored() {
     <nav className={classes.navbar}>
       <div className={classes.navbarMain}>
         <div className={classes.header}>
-            <div><Image src={pic} alt="Avatar" h='2vmax' w="auto" /></div>
+            <div className={classes.icon}>
+              <Image className={classes.icon1} src={pic} alt="Avatar" h='2vmax' w="auto" />
+              <Image className={classes.icon2} src={pic} alt="Avatar" h='2vmax' w="auto" />
+              <Image className={classes.icon3} src={pic} alt="Avatar" h='2vmax' w="auto" />
+              <Image className={classes.icon4} src={pic} alt="Avatar" h='2vmax' w="auto" />
+            </div>
             <div className={classes.icontext}>ArrowFlicks</div>
             <div></div>
             <div></div>

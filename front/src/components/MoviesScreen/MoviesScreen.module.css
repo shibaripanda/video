@@ -17,3 +17,18 @@
   .grid {
     display: flex; 
   }
+
+  .filter {
+    align-items: center;
+    display: flex;
+    justify-content: flex-start;
+    gap: 5px;
+    margin:  5.125vmax 0vmax 4vmax 0vmax;
+  }
+
+  .sort {
+    align-items: right;
+    display: flex;
+    justify-content: flex-end;
+    margin:  0vmax 0vmax 4vmax 0vmax;
+  }
