@@ -63,7 +63,7 @@ export function MoviesScreen() {
       res = await getFilterData(1, await genreToId(genreFilter, genres), yearFilter, value, fromFilter, toFilter)
     }
     else if (label === 'Rating') {
-      if(value > toFilter){
+      if(value > toFilter || toFilter !== ''){
         setToFilter(value)
         setFromFilter(value)
         res = await getFilterData(1, await genreToId(genreFilter, genres), yearFilter, sortFilter, value, value)
