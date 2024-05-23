@@ -39,18 +39,20 @@
 }
 
 .App { 
-    width:  1440px;
+    width:  90vmax;
+    height: 173.875vmax;
 }
 
 .Nav {
-    width: 19%;
+    width: 17.5vmax;
+    /* height: 1165.25vmax; */
 }
 
 .Main {
     /* width: 81%; */
     /* display: flex; */
     /* justify-content: center; */
-    margin:  5.125vmax 5.125vmax 5.625vmax 5.125vmax;
+    margin:  2.5vmax 5.125vmax 5.625vmax 5.125vmax;
 }
 
 .screen {

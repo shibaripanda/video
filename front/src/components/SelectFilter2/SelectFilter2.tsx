@@ -4,7 +4,6 @@ import React from 'react';
 import classes from './SelectFilter2.module.css';
 
 export function SelectFilter2({label, data}) {
-  console.log(data)
   return (
       <NativeSelect
         className={classes.selectbig}
@@ -12,7 +11,7 @@ export function SelectFilter2({label, data}) {
         // label={label}
         label={<div className={classes.labelfont}>{label}</div>}
         defaultValue={'dddddd'}
-        data={data}
+        // data={data}
         mt="md"
       />
   );

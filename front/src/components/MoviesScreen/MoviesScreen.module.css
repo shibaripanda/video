@@ -23,12 +23,17 @@
     display: flex;
     justify-content: flex-start;
     gap: 5px;
-    margin:  5.125vmax 0vmax 4vmax 0vmax;
+    margin:  0.25vmax 0vmax 1vmax 0vmax;
   }
 
   .sort {
     align-items: right;
     display: flex;
     justify-content: flex-end;
-    margin:  0vmax 0vmax 4vmax 0vmax;
+    margin:  0vmax 0vmax 2.5vmax 0vmax;
+  }
+
+  .pagin {
+    display: flex;
+    justify-content: flex-end;
   }

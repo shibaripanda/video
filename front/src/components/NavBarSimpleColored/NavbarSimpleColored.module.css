@@ -1,5 +1,5 @@
 .navbar {
-  height: 56.25vmax;
+  height: 165.25vmax;
   /* width: rem(300px); */
   /* padding: var(--mantine-spacing-md); */
   display: flex;
@@ -20,7 +20,7 @@
   width: 2vmax;
   position: relative;
   display: flex;
-  justify-content: center;
+  justify-content: space-between;
 }
 
 .icon1 {
@@ -30,21 +30,21 @@
 .icon2 {
   position: absolute;
   transform: rotate(90deg);
-  bottom: 0.75vmax;
-  left: 1.07vmax;
+  bottom: 1.1vmax;
+  left: 0.5vmax;
 }
 
 .icon3 {
   position: absolute;
   transform: rotate(270deg);
-  bottom: -0.75vmax;
-  left: 1.07vmax;
+  bottom: 0.12vmax;
+  left: 0.5vmax;
 }
 
 .icon4 {
   position: absolute;
   transform: rotate(180deg);
-  left: 1.9vmax;
+  left: 1vmax;
 }
 
 .icontext {
@@ -57,6 +57,7 @@
 }
 
 .header {
+  align-items: center;
   margin:  1vmax 1vmax 2vmax;
   display: flex;
   justify-content: space-between;
@@ -89,3 +90,26 @@
   }
 }
 
+/* .icon1 {
+  position: absolute;
+}
+
+.icon2 {
+  position: absolute;
+  transform: rotate(90deg);
+  bottom: 1.1vmax;
+  left: 1.1vmax;
+}
+
+.icon3 {
+  position: absolute;
+  transform: rotate(270deg);
+  bottom: 0.12vmax;
+  left: 1.1vmax;
+}
+
+.icon4 {
+  position: absolute;
+  transform: rotate(180deg);
+  left: 1.6vmax;
+} */

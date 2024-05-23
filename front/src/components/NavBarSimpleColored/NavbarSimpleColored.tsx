@@ -33,10 +33,10 @@ export function NavbarSimpleColored() {
       <div className={classes.navbarMain}>
         <div className={classes.header}>
             <div className={classes.icon}>
-              <Image className={classes.icon1} src={pic} alt="Avatar" h='2vmax' w="auto" />
-              <Image className={classes.icon2} src={pic} alt="Avatar" h='2vmax' w="auto" />
-              <Image className={classes.icon3} src={pic} alt="Avatar" h='2vmax' w="auto" />
-              <Image className={classes.icon4} src={pic} alt="Avatar" h='2vmax' w="auto" />
+              <Image className={classes.icon1} src={pic} alt="Avatar" h='1.380625vmax' w="auto" />
+              <Image className={classes.icon2} src={pic} alt="Avatar" h='1.380625vmax' w="auto" />
+              <Image className={classes.icon3} src={pic} alt="Avatar" h='1.380625vmax' w="auto" />
+              <Image className={classes.icon4} src={pic} alt="Avatar" h='1.380625vmax' w="auto" />
             </div>
             <div className={classes.icontext}>ArrowFlicks</div>
             <div></div>
