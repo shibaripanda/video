@@ -1,6 +1,6 @@
 import fetch from 'node-fetch'
 
-export const getData = async (setData: any, page: number) => {
+export const getData = async () => {
     // const dataAr = [
     //     {
     //       title: 'The Green Mile',
@@ -88,7 +88,13 @@ export const getData = async (setData: any, page: number) => {
     //     }
     // ]
 
-  const url = `https://api.themoviedb.org/3/discover/movie?include_adult=false&include_video=false&language=en-US&page=${page}&sort_by=popularity.desc`;
+  const url = `https://api.themoviedb.org/3/discover/movie?`+
+  `include_adult=false&`+
+  `include_video=false&`+
+  `language=en-US&`+
+  `page=1&`+
+  `sort_by=popularity.desc`;
+  console.log(url)
   const options = {
     method: 'GET',
     headers: {
@@ -97,11 +103,13 @@ export const getData = async (setData: any, page: number) => {
     }
   };
 
-  await fetch(url, options)
+  const res = await fetch(url, options)
     .then(res => res.json())
     .then(json => {
-      setData(json)
+      return json
     })
     .catch(err => console.error('error:' + err));
+
+    return res
 }
 

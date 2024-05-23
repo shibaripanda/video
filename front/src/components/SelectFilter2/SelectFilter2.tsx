@@ -1,17 +1,18 @@
-import { NativeSelect, rem } from '@mantine/core';
-import { IconChevronDown } from '@tabler/icons-react';
+import { Select } from '@mantine/core';
 import React from 'react';
 import classes from './SelectFilter2.module.css';
 
-export function SelectFilter2({label, data}) {
+export function SelectFilter2({value, holder, label, data, updateFilter}) {
   return (
-      <NativeSelect
+      <Select
         className={classes.selectbig}
-        rightSection={<IconChevronDown style={{ width: rem(16), height: rem(16) }} />}
+        // rightSection={<IconChevronDown style={{ width: rem(16), height: rem(16) }} />}
         // label={label}
         label={<div className={classes.labelfont}>{label}</div>}
-        defaultValue={'dddddd'}
-        // data={data}
+        placeholder={holder}
+        onChange={value => updateFilter(value, label)}
+        value={value}
+        data={data}
         mt="md"
       />
   );

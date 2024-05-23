@@ -1,9 +1,20 @@
 import fetch from 'node-fetch'
 
 
-export const getFilterData = async (setData: any, page: number, genre, year, sort) => {
-
-    const url = `https://api.themoviedb.org/3/discover/movie?page=${page}&primary_release_year=${year}&sort_by=popularity.desc&vote_average.gte=5&vote_average.lte=5&with_genres=${genre}`;
+export const getFilterData = async (page: number, genre, year, sort, from, to) => {
+    console.log(genre)
+    const url = `https://api.themoviedb.org/3/discover/movie?`+
+    `include_adult=false&`+
+    `include_video=false&`+
+    `language=en-US&`+
+    `page=${page}&`+
+    `primary_release_year=${year}&`+
+    `sort_by=popularity.desc&`+
+    `vote_average.gte=${from}&`+
+    `vote_average.lte=${to}&`+
+    `with_genres=${genre}`+
+    ``
+    console.log(url)
     const options = {
     method: 'GET',
     headers: {
@@ -12,12 +23,13 @@ export const getFilterData = async (setData: any, page: number, genre, year, sor
     }
     };
 
-    await fetch(url, options)
+    const res = await fetch(url, options)
     .then(res => res.json())
     .then(json => {
-        console.log(json)
-      setData(json)
+        return json
     })
     .catch(err => console.error('error:' + err))
+
+    return res
 
 }
