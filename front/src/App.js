@@ -17,7 +17,7 @@ export default function App() {
         <BrowserRouter>
           <Routes>
               <Route path="/" element={<Movies/>} />
-              <Route path="movie" element={<Movie/>} />
+              <Route path="movie/*" element={<Movie/>} />
               <Route path="*" element={<Page404/>} />
           </Routes>
         </BrowserRouter>

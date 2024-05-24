@@ -1,0 +1,148 @@
+  .main {
+    width: 50vmax;
+    height: 74.3125vmax;
+    margin:  2.5vmax 5.625vmax 0.625vmax 5.625vmax;
+  }
+
+  .main1 {
+    /* width: 50vmax;
+    height: 74.3125vmax; */
+    margin: 1.5vmax 1.5vmax 1.5vmax 1.5vmax;
+  }
+
+  .toptext {
+    font-size: 0.875vmax;
+    font-family: 'Inter400';
+    color: #9854F6;
+    display: flex;
+    justify-content: flex-start;
+  }
+
+  .slash {
+    font-size: 0.9375vmax;
+    font-family: 'Inter400';
+    color: #000000;
+  }
+
+  .card {
+    width: 50vmax;
+    height: 25vmax;
+    border-radius: 0.75vmax;
+    
+  }
+
+  .boxitem {
+    height: 22vmax;
+    width: 100%;
+    position: relative;
+    margin-right: 1.5vmax;
+  }
+
+  .table {
+    width: 8.75vmax;
+  }
+
+  .cardinfo {
+    margin-top: 1vmax;
+    width: 50vmax;
+    height: 45.5625vmax;
+    border-radius: 0.75vmax;
+  }
+
+
+  
+  .title {
+    font-family: 'Inter';
+    color: #6a6af5;
+    align-items: center;
+    font-size: 1.25vmax;
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .prodlist {
+    font-family: 'Inter';
+    font-size: 1vmax;
+    color: #000000;
+    display: flex;
+    justify-content: flex-start;
+  }
+
+  .titletrailer {
+    font-family: 'Inter';
+    color: #000000;
+    /* align-items: center; */
+    font-size: 1.25vmax;
+    /* display: flex;
+    justify-content: space-between; */
+  }
+
+  .prodtitle {
+    margin-bottom: 1vmax;
+    font-family: 'Inter';
+    color: #000000;
+    /* align-items: center; */
+    font-size: 1.25vmax;
+    /* display: flex;
+    justify-content: space-between; */
+  }
+
+  .desc {
+    margin-top: 1vmax;
+    font-family: 'Inter';
+    margin-bottom: 1vmax;
+    font-size: 1vmax;
+    font-weight: 400;
+  }
+
+  .video {
+    margin-top: 1vmax;
+    margin-bottom: 1vmax;
+    width: 31.25vmax;
+  }
+
+  .line {
+    margin-bottom: 1vmax;
+    color: '#D5D6DC';
+
+  }
+
+  .year {
+    font-family: 'Inter400';
+    color: #7B7C88;
+    font-size: 1vmax;
+  }
+  
+  .genre {
+    font-family: 'Inter400';
+    font-size: 1vmax;
+    align-items: center;
+    position: absolute; 
+    bottom: 0; 
+    left: 0;
+    display: flex;
+    color: #7B7C88;
+  }
+
+  .genrelist {
+    font-family: 'Inter400';
+    font-size: 1vmax;
+    font-family: 'Poppins';
+    color: #000000;
+  }
+
+  .rate {
+    align-items: center;
+    font-size: 1vmax;
+    display: flex;
+    justify-content: flex-start;
+  }
+
+  .img {
+    margin: 1.5vmax 1.5vmax 1.5vmax 1.5vmax;
+    height: 22vmax;
+  }
+
+  .icon {
+    height: 1.75vmax;
+  }

@@ -3,6 +3,7 @@ import classes from './CardItem.module.css';
 import empty from '../../img/empty.png';
 import starPic from '../../img/star.png';
 import darkStarPic from '../../img/darkstar.png'
+import { fix } from '../../fix';
 
 export function CardItem({film, genres}) {
 
@@ -29,7 +30,7 @@ export function CardItem({film, genres}) {
   }
 
   return (
-    <Card withBorder p={0} className={classes.card}>
+    <Card withBorder p={0} className={classes.card} component="a" href={`${fix.link}/movie?id=${film.id}`}>
       <Group wrap="nowrap" gap={0}>
         <Image
           className={classes.img}

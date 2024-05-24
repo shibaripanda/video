@@ -88,11 +88,11 @@ export function MoviesScreen() {
         <div style={{fontSize: '2vmax'}}>Movies</div>
 
         <div className={classes.filter}>
-          <div><SelectFilter value={genreFilter} label={'Genres'} holder={'Select genre'} data={genres.map(item => item['name'])} updateFilter={updateFilter}/></div>
-          <div><SelectFilter value={yearFilter}  label={'Release year'} holder={'Select release year'} data={getNumberArString(new Date(Date.now()).getFullYear(), i => i + 1, 130)} updateFilter={updateFilter}/></div>
-          <div><SelectFilter2 value={fromFilter}  label={'Rating'} holder={'From'} data={getNumberArString(10, i => i + 1, 10)} updateFilter={updateFilter}/></div>
-          <div><SelectFilter2 value={toFilter}  label={''} holder={'To'} data={getNumberArString(Number(fromFilter) + (10 - Number(fromFilter)), i => i + 1, 11 - Number(fromFilter))} updateFilter={updateFilter}/></div>
-          <div style={{fontSize: '0.875vmax', font: 'Inter400', color: '#7B7C88'}}>Reset filter</div>
+          <div><SelectFilter  updateFilter={updateFilter} value={genreFilter} label={'Genres'}       holder={'Select genre'}        data={genres.map(item => item['name'])}/></div>
+          <div><SelectFilter  updateFilter={updateFilter} value={yearFilter}  label={'Release year'} holder={'Select release year'} data={getNumberArString(new Date(Date.now()).getFullYear(), i => i + 1, 130)}/></div>
+          <div><SelectFilter2 updateFilter={updateFilter} value={fromFilter}  label={'Rating'}       holder={'From'}                data={getNumberArString(10, i => i + 1, 10)}/></div>
+          <div><SelectFilter2 updateFilter={updateFilter} value={toFilter}    label={''}             holder={'To'}                  data={getNumberArString(Number(fromFilter) + (10 - Number(fromFilter)), i => i + 1, 11 - Number(fromFilter))}/></div>
+          {/* <div style={{fontSize: '0.875vmax', font: 'Inter400', color: '#7B7C88'}}>Reset filter</div> */}
         </div>
         <div className={classes.sort}>
           <div><SelectFilter value={sortFilter}  label={'Sort by'} holder={'Most popular'} data={['Most popular', 'Release year']} updateFilter={updateFilter}/></div>
@@ -103,4 +103,5 @@ export function MoviesScreen() {
 
   }
   return <Loader size={30} />
+  
 }

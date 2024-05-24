@@ -8,12 +8,16 @@ export function SelectFilter({value, label, holder, data, updateFilter}) {
       <Select
         className={classes.selectbig}
         rightSection={<IconChevronDown style={{ width: rem(16), height: rem(16) }} />}
+        // label={<div className={classes.font}>{label}</div>}
         label={label}
         value={value}
         onChange={value => updateFilter(value, label)}
         placeholder={holder}
         data={data}
-        mt="md"
+        // mt="md"
+        // size='1vmax'
+        height={'1vmax'}
+        h={'2.625vmax'}
       />
   );
 }
