@@ -6,12 +6,12 @@ import pic from '../../img/arrow.png';
 
 
 const data = [
-  { link: '', label: 'Movies' },
-  { link: '', label: 'Ratied movies' },
+  { link: 'http://localhost:3000/', label: 'Movies' },
+  { link: 'http://localhost:3000/raited', label: 'Ratied movies' },
 ];
 
 export function NavbarSimpleColored() {
-  const [active, setActive] = useState('Movies');
+  const [active, setActive] = useState(sessionStorage.getItem('page') ? sessionStorage.getItem('page') : 'Movie')
 
   const links = data.map((item) => (
     <a
@@ -20,7 +20,7 @@ export function NavbarSimpleColored() {
       href={item.link}
       key={item.label}
       onClick={(event) => {
-        event.preventDefault();
+        sessionStorage.setItem('page', item.label)
         setActive(item.label);
       }}
     >

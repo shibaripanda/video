@@ -4,12 +4,39 @@
 }
 
 .line {
-    width: 31.75vmax;
+    width: 100%;
     color: rgb(238, 231, 231);
     /* margin:  0vmax 0vmax 0vmax 0vmax; */
 }
 
+.title {
+    font-family: 'Inter';
+    font-size: 1.25vmax;
+    margin:  1.1vmax 0vmax 1vmax 0vmax;
+}
+
 .starline {
     display: flex;
-    justify-content: flex-start;
+    justify-content: space-between;
+    margin:  1.5vmax 0vmax 1.5vmax 0vmax;
+}
+
+.but1 {
+    height: 3vmax;
+    border-radius: 0.75vmax;
+    color: rgb(255, 255, 255);
+    background-color: blueviolet;
+    &:hover {
+        background-color: blueviolet;
+    }
+}
+
+.but2 {
+    border-radius: 0.75vmax;
+    color: blueviolet;
+    background-color: white;
+    &:hover {
+        background-color: white;
+        color :blueviolet;
+    }
 }

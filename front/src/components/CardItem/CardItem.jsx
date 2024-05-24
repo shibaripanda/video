@@ -10,12 +10,19 @@ export function CardItem({setModalFilmId, openModal, film, genres}) {
 
   const [star, setStar] = useState('')
 
+  
   const genreList = () => {
-    const result = []
-    for(let i of film.genre_ids){
-      result.push(genres.find(item => item.id === i).name)
+
+    if(typeof film['genre_ids'] !== 'undefined'){
+      const result = []
+      for(let i of film.genre_ids){
+        result.push(genres.find(item => item.id === i).name)
+      }
+      return result.join(', ')
     }
-    return result.join(', ')
+    
+    return film.genres.map(item => item.name).join(', ')
+    
   }
 
   const cutNumber = (n) => {
@@ -46,20 +53,20 @@ export function CardItem({setModalFilmId, openModal, film, genres}) {
       }
     }
     else{
-      sessionStorage.setItem('likes', String(film.id))
+      sessionStorage.setItem('likes', [{id: String(film.id), rat: 5}])
     }
+    console.log(sessionStorage.getItem('likes'))
     setStar(String(film.id))
   }
 
   const starState = () => {
-    console.log('sdsdsd')
     if(sessionStorage.getItem('likes')){
       const likesString = sessionStorage.getItem('likes').split(',')
-      const index = likesString.findIndex(item => item === String(film.id))
+      const index = likesString.findIndex(item => item.slice(0, -1) === String(film.id))
       if(index === -1){
         return darkStarPic
       }
-      return starPic
+      return starPic// + likesString[index][likesString[index].length - 1]
     }
     return darkStarPic
   }

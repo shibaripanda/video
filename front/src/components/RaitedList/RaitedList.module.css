@@ -1,0 +1,44 @@
+  .description {
+    max-width: rem(600px);
+    margin: auto;
+  
+    &::after {
+      content: '';
+      display: block;
+      background-color: var(--mantine-color-blue-filled);
+      width: rem(45px);
+      height: rem(2px);
+      margin-top: var(--mantine-spacing-sm);
+      margin-left: auto;
+      margin-right: auto;
+    }
+  }
+
+  .grid {
+    display: flex; 
+  }
+
+  .filter {
+    align-items: center;
+    display: flex;
+    justify-content: flex-start;
+    gap: 5px;
+    margin:  0.25vmax 0vmax 1vmax 0vmax;
+  }
+
+  .sort {
+    align-items: right;
+    display: flex;
+    justify-content: flex-end;
+    margin:  0vmax 0vmax 2.5vmax 0vmax;
+  }
+
+  .pagin {
+    display: flex;
+    justify-content: flex-end;
+  }
+
+  .modal {
+    width: 23.75vmax;
+    height: 13vmax;
+  }

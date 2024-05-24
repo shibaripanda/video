@@ -1,11 +1,13 @@
 import React, { useEffect, useState } from 'react';
 import classes from './Film.module.css';
-import { AspectRatio, Card, Group, Image, Loader } from '@mantine/core'
+import { AspectRatio, Card, Group, Image, Loader, Modal } from '@mantine/core'
 import { getDataById } from '../../modules/getDataById.tsx';
 import starPic from '../../img/star.png';
 import darkStarPic from '../../img/darkstar.png'
 import empty from '../../img/empty.png';
 import { getGenresMovie } from '../../modules/getGenresMovie.tsx';
+import { ModalReiting } from '../ModalReiting/ModalReiting.tsx';
+import { useDisclosure } from '@mantine/hooks';
 
 
 export function Film() {
@@ -14,6 +16,7 @@ export function Film() {
 
   const [genres, setGenres] = useState([])
   const [data, setData] = useState(false)
+  const [opened, { open, close }] = useDisclosure(false)
 
   useEffect(()=> {
     const getStartData = async () => {
@@ -104,12 +107,31 @@ export function Film() {
     }
     return ar
   }
+
+  const starState = () => {
+    console.log('sdsdsd')
+    if(sessionStorage.getItem('likes')){
+      const likesString = sessionStorage.getItem('likes').split(',')
+      const index = likesString.findIndex(item => item.slice(0, -1) === String(data.id))
+      if(index === -1){
+        return darkStarPic
+      }
+      return starPic// + likesString[index][likesString[index].length - 1]
+    }
+    return darkStarPic
+  }
   
 
   if(data){
 
     return(
+      
       <div className={classes.main}>
+        <>
+          <Modal xOffset={'0vmax'} radius={'0.5vmax'} opened={opened} onClose={close} title="Your rating" centered>
+            <ModalReiting modalFilmId={{id: data.id, title: data.original_title}} onClose={close}/>
+          </Modal>
+        </>
         <div className={classes.toptext}>Movie <div className={classes.slash}>&nbsp;/&nbsp;</div> {data['original_title']}</div>
         <Card withBorder p={0} className={classes.card}>
           <Group wrap="nowrap" gap={0}>
@@ -118,7 +140,11 @@ export function Film() {
               src={`https://image.tmdb.org/t/p/w500/${data.poster_path}` ? `https://image.tmdb.org/t/p/w500/${data.poster_path}` : empty}
             />
             <div className={classes.boxitem}>
-              <div className={classes.title}>{data.original_title} <Image className={classes.icon} src={darkStarPic}/></div>
+              <div className={classes.title}>{data.original_title} <Image className={classes.icon} src={starState()} onClick={(e) => {
+            e.preventDefault()
+            // setModalFilmId({id: data.id, title: data.original_title})
+            open()
+          }}/></div>
               <div className={classes.year}>{data.release_date.split('-')[0]}</div>
               <div className={classes.rate}>
                 <Image className={classes.icon} src={starPic}/>

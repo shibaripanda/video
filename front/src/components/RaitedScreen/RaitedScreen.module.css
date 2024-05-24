@@ -1,0 +1,10 @@
+.pagLine {
+    display: flex; 
+    justify-content: center;
+}
+
+.nofilm {
+    width: 100%;
+    /* display: flex;  */
+    justify-content: center;
+}

@@ -113,20 +113,6 @@ export function MoviesScreen() {
 
 
 
-// function Demo() {
-//   const [opened, { open, close }] = useDisclosure(false);
-
-//   return (
-//     <>
-//       <Modal opened={opened} onClose={close} title="Authentication" centered>
-//         {/* Modal content */}
-//       </Modal>
-
-//       <Button onClick={open}>Open centered Modal</Button>
-//     </>
-//   );
-// }
-
   if(data && genres.length){
     console.log('filters:', genreFilter, yearFilter, sortFilter)
 
@@ -134,7 +120,7 @@ export function MoviesScreen() {
       <div>
         <>
           <Modal xOffset={'0vmax'} radius={'0.5vmax'} opened={opened} onClose={close} title="Your rating" centered>
-            <ModalReiting modalFilmId={modalFilmId}/>
+            <ModalReiting modalFilmId={modalFilmId} onClose={close}/>
           </Modal>
         </>
         <div style={{fontSize: '2vmax'}}>Movies</div>
