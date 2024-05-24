@@ -37,3 +37,8 @@
     display: flex;
     justify-content: flex-end;
   }
+
+  .modal {
+    width: 23.75vmax;
+    height: 13vmax;
+  }

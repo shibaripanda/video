@@ -12,14 +12,14 @@ function chunk<T>(array: T[], size: number): T[][] {
   return [head, ...chunk(tail, size)];
 }
 
-export function PaginationLine({datain, genres, updataPage, activePage}) {
+export function PaginationLine({setModalFilmId, openModal, datain, genres, updataPage, activePage}) {
   const maxPage = (countPages: number) => {
     if(countPages > 500) return 500
     return countPages
   }
   if(datain.results.length){
       const data = chunk(datain['results'], 20)
-      const items = data[0].map((film, index) => <div key={index}><CardItem film={film} genres={genres}/></div>);
+      const items = data[0].map((film, index) => <div key={index}><CardItem setModalFilmId={setModalFilmId} openModal={openModal} film={film} genres={genres}/></div>);
       return (
         <>
           <SimpleGrid cols={2} spacing="xs" verticalSpacing="xs">

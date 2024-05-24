@@ -1,100 +1,25 @@
 import fetch from 'node-fetch'
 
 export const getData = async () => {
-    // const dataAr = [
-    //     {
-    //       title: 'The Green Mile',
-    //       year: 1999,
-    //       rate: 9.3,
-    //       view: '2.9M',
-    //       genre: ['Drama', 'Crime', 'Fantasy']
-    //     },
-    //     {
-    //       title: 'The Green Mile1',
-    //       year: 2000,
-    //       rate: 9.3,
-    //       view: '2.9M',
-    //       genre: ['Drama', 'Crime', 'Fantasy']
-    //     },
-    //     {
-    //       title: 'The Green Mile2',
-    //       year: 1986,
-    //       rate: 9.3,
-    //       view: '2.9M',
-    //       genre: ['Drama', 'Crime', 'Fantasy']
-    //     },
-    //     {
-    //       title: 'The Green Mile3',
-    //       year: 2017,
-    //       rate: 9.3,
-    //       view: '2.9M',
-    //       genre: ['Drama', 'Crime', 'Fantasy']
-    //     },
-    //     {
-    //       title: 'The Green Mile4',
-    //       year: 2022,
-    //       rate: 9.3,
-    //       view: '2.9M',
-    //       genre: ['Drama', 'Crime', 'Fantasy']
-    //     },
-    //     {
-    //       title: 'The Green Mile5',
-    //       year: 1943,
-    //       rate: 9.3,
-    //       view: '2.9M',
-    //       genre: ['Drama', 'Crime', 'Fantasy']
-    //     },
-    //     {
-    //       title: 'The Green Mile6',
-    //       year: 1995,
-    //       rate: 9.3,
-    //       view: '2.9M',
-    //       genre: ['Drama', 'Crime', 'Fantasy']
-    //     },
-    //     {
-    //       title: 'The Green Mile7',
-    //       year: 1999,
-    //       rate: 9.3,
-    //       view: '2.9M',
-    //       genre: ['Drama', 'Crime', 'Fantasy']
-    //     },
-    //     {
-    //       title: 'The Green Mile8',
-    //       year: 2000,
-    //       rate: 9.3,
-    //       view: '2.9M',
-    //       genre: ['Drama', 'Crime', 'Fantasy']
-    //     },
-    //     {
-    //       title: 'The Green Mile9',
-    //       year: 1999,
-    //       rate: 9.3,
-    //       view: '2.9M',
-    //       genre: ['Drama', 'Crime', 'Fantasy']
-    //     },
-    //     {
-    //       title: 'The Green Mile10',
-    //       year: 1991,
-    //       rate: 9.3,
-    //       view: '2.9M',
-    //       genre: ['Drama', 'Crime', 'Fantasy']
-    //     },
-    //     {
-    //       title: 'The Green Mile11',
-    //       year: 1999,
-    //       rate: 9.3,
-    //       view: '2.9M',
-    //       genre: ['Drama', 'Crime', 'Fantasy']
-    //     }
-    // ]
 
   const url = `https://api.themoviedb.org/3/discover/movie?`+
-  `include_adult=false&`+
-  `include_video=false&`+
-  `language=en-US&`+
-  `page=1&`+
-  `sort_by=popularity.desc`;
-  console.log(url)
+    `include_adult=false&`+
+    `include_video=false&`+
+    `language=en-US&`+
+    `page=${sessionStorage.getItem('activePage') ? sessionStorage.getItem('activePage') : 1}&`+
+    `primary_release_year=${sessionStorage.getItem('yearFilter') ? sessionStorage.getItem('yearFilter') : ''}&`+
+    `sort_by=popularity.desc&`+
+    `vote_average.gte=${sessionStorage.getItem('fromFilter') ? sessionStorage.getItem('fromFilter') : ''}&`+
+    `vote_average.lte=${sessionStorage.getItem('toFilter') ? sessionStorage.getItem('toFilter') : ''}&`+
+    `with_genres=${sessionStorage.getItem('genreFilter') ? sessionStorage.getItem('genreFilter') : ''}`+
+    ``
+
+  // const url = `https://api.themoviedb.org/3/discover/movie?`+
+  // `include_adult=false&`+
+  // `include_video=false&`+
+  // `language=en-US&`+
+  // `page=1&`+
+  // `sort_by=popularity.desc`;
   const options = {
     method: 'GET',
     headers: {

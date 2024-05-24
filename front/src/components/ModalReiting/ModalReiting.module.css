@@ -1,0 +1,15 @@
+.modal {
+    width: 23.75vmax;
+    height: 13vmax;
+}
+
+.line {
+    width: 31.75vmax;
+    color: rgb(238, 231, 231);
+    /* margin:  0vmax 0vmax 0vmax 0vmax; */
+}
+
+.starline {
+    display: flex;
+    justify-content: flex-start;
+}

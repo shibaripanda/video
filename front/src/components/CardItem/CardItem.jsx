@@ -4,8 +4,11 @@ import empty from '../../img/empty.png';
 import starPic from '../../img/star.png';
 import darkStarPic from '../../img/darkstar.png'
 import { fix } from '../../fix';
+import { useState } from 'react';
 
-export function CardItem({film, genres}) {
+export function CardItem({setModalFilmId, openModal, film, genres}) {
+
+  const [star, setStar] = useState('')
 
   const genreList = () => {
     const result = []
@@ -29,6 +32,38 @@ export function CardItem({film, genres}) {
     return n;
   }
 
+  const likeItem = () => {
+    if(sessionStorage.getItem('likes')){
+      const likesString = sessionStorage.getItem('likes').split(',')
+      const index = likesString.findIndex(item => item === String(film.id))
+      if(index === -1){
+        likesString.push(String(film.id))
+        sessionStorage.setItem('likes', likesString.join())
+      }
+      else{
+        likesString.splice(index, 1)
+        sessionStorage.setItem('likes', likesString.join())
+      }
+    }
+    else{
+      sessionStorage.setItem('likes', String(film.id))
+    }
+    setStar(String(film.id))
+  }
+
+  const starState = () => {
+    console.log('sdsdsd')
+    if(sessionStorage.getItem('likes')){
+      const likesString = sessionStorage.getItem('likes').split(',')
+      const index = likesString.findIndex(item => item === String(film.id))
+      if(index === -1){
+        return darkStarPic
+      }
+      return starPic
+    }
+    return darkStarPic
+  }
+
   return (
     <Card withBorder p={0} className={classes.card} component="a" href={`${fix.link}/movie?id=${film.id}`}>
       <Group wrap="nowrap" gap={0}>
@@ -37,7 +72,13 @@ export function CardItem({film, genres}) {
           src={`https://image.tmdb.org/t/p/w500/${film.poster_path}` ? `https://image.tmdb.org/t/p/w500/${film.poster_path}` : empty}
         />
         <div className={classes.boxitem}>
-          <div className={classes.title}>{film.title} <Image className={classes.icon} src={darkStarPic}/></div>
+          <div className={classes.title}>{film.title} <Image className={classes.icon} src={starState()} 
+          onClick={(e) => {
+            e.preventDefault()
+            setModalFilmId({id: film.id, title: film.title})
+            openModal()
+          }}
+            /></div>
           <div className={classes.year}>{film.release_date.split('-')[0]}</div>
           <div className={classes.rate}>
             <Image className={classes.icon} src={starPic}/>

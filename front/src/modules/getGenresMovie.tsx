@@ -1,6 +1,6 @@
 import fetch from 'node-fetch'
 
-export const getGenresMovie = (setGenres) => {
+export const getGenresMovie = async () => {
 
     const url = 'https://api.themoviedb.org/3/genre/movie/list?language=en';
     const options = {
@@ -11,12 +11,12 @@ export const getGenresMovie = (setGenres) => {
     }
     };
 
-    fetch(url, options)
+    const res = await fetch(url, options)
     .then(res => res.json())
     .then(json => {
-        // console.log(json.genres)
-        setGenres(json.genres)
+        return json
     })
-    .catch(err => console.error('error:' + err));
+    .catch(err => console.error('error:' + err))
 
+    return res
 }

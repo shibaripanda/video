@@ -10,22 +10,31 @@ import { getGenresMovie } from '../../modules/getGenresMovie.tsx';
 
 export function Film() {
 
-
   const params = ((new URL(document.location)).searchParams).get("id")
 
   const [genres, setGenres] = useState([])
   const [data, setData] = useState(false)
 
   useEffect(()=> {
-    getGenresMovie(setGenres)
+    const getStartData = async () => {
+      const res = await getDataById(params)
+      setData(res)
+      console.log(res)
+    }
+    getGenreData()
     getStartData()
-  },[])
+  },[params])
 
-  const getStartData = async () => {
-    const res = await getDataById(params)
-    setData(res)
-    console.log(res)
+  const getGenreData = async () => {
+    const res = await getGenresMovie()
+    setGenres(res.genres)
   }
+
+  // const getStartData = async () => {
+  //   const res = await getDataById(params)
+  //   setData(res)
+  //   console.log(res)
+  // }
 
   const genreList = () => {
     const result = []
@@ -69,7 +78,6 @@ export function Film() {
   const findOfTrailer = () => {
 
     const key = data.videos.results.find(item => item.name === 'Official Trailer' || 'Main Trailer')
-    console.log(key)
 
     if(!key){
       return 'MDnVk5jIJr0'
