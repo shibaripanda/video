@@ -7,8 +7,8 @@ import { fix } from '../../fix';
 
 
 const data = [
-  { link: `http://${fix.link}/`, label: 'Movies' },
-  { link: `http://${fix.link}/raited`, label: 'Ratied movies' },
+  { link: `${fix.link}/`, label: 'Movies' },
+  { link: `${fix.link}/raited`, label: 'Ratied movies' },
 ];
 
 export function NavbarSimpleColored() {
