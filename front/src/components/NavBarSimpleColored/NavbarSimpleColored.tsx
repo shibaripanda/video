@@ -3,11 +3,12 @@ import { useState } from 'react';
 import classes from './NavbarSimpleColored.module.css';
 import { Image } from '@mantine/core'
 import pic from '../../img/arrow.png';
+import { fix } from '../../fix';
 
 
 const data = [
-  { link: 'http://localhost:3000/', label: 'Movies' },
-  { link: 'http://localhost:3000/raited', label: 'Ratied movies' },
+  { link: `http://${fix.link}:3000/`, label: 'Movies' },
+  { link: `http://${fix.link}:3000/raited`, label: 'Ratied movies' },
 ];
 
 export function NavbarSimpleColored() {
